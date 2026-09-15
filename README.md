@@ -1,48 +1,74 @@
-# Desafio Mercearia do Seu Zé
+# Planejamento do projeto — Mercearia do Seu Zé
 
-Site institucional de uma página (`index.html`) desenvolvido como solução para
-o estudo de caso da Mercearia do Seu Zé: dar presença digital a um mercado de
-bairro de mais de 40 anos no Centro Histórico de Curitiba, mostrando endereço,
-horário, contato e os produtos da semana para quem pesquisa no celular antes
-de visitar a loja.
+## Passo 1: Definição do objetivo
 
-O raciocínio completo (objetivo, público-alvo, wireframe) está em
-[`PLANEJAMENTO.md`](./PLANEJAMENTO.md).
+**Objetivo principal da página**
+Criar a presença digital oficial da Mercearia do Seu Zé no Google, para que o
+estabelecimento seja facilmente encontrado por quem busca mercados, produtos
+coloniais e conveniências no Centro de Curitiba. A página funciona como um
+cartão de visitas digital: rápido de carregar, informativo e confiável — não
+uma loja virtual, apenas uma vitrine que leva a pessoa até a loja física.
 
-## Como visualizar
+**Público-alvo do site**
+- **Primário:** jovens adultos, universitários e novos moradores do Centro e
+  bairros vizinhos, que pesquisam no celular (Google/Maps) antes de sair de
+  casa e hoje não sabem que a mercearia existe.
+- **Secundário:** filhos e netos dos clientes antigos, que buscam horário e
+  contato para ajudar pais e avós.
 
-Basta abrir o arquivo `index.html` em qualquer navegador — não há
-dependências de build.
+**3 informações essenciais que não podem faltar na tela**
+1. Endereço completo e ponto de referência no Centro de Curitiba, com link
+   direto para o Google Maps.
+2. Horário atualizado de funcionamento (semana e fim de semana).
+3. Canais de contato direto (WhatsApp e telefone fixo) e a lista dos
+   principais produtos/promoções da semana.
 
-## Estrutura do repositório
+**Requisito extra (solicitação do Seu Zé e do Lucas)**
+Cada aluno/grupo inclui no repositório um `README.md` com um mini-currículo
+profissional dos integrantes (formação, competências técnicas em
+desenvolvimento, links de GitHub/LinkedIn e uma breve motivação), para que o
+Seu Zé possa avaliar dedicação e perfil profissional da equipe mesmo sem
+entender de código.
 
+## Passo 2: Arquitetura da informação (wireframe)
+
+Ver `wireframe.svg` — estrutura de baixa fidelidade com a ordem de leitura:
+cabeçalho (nome + WhatsApp) → chamada principal com selo "40+ anos" →
+apresentação da loja → produtos/promoções da semana → endereço/horário/contato
+→ rodapé. A hierarquia prioriza primeiro a headline e o selo de tradição
+(o que diferencia a loja), depois os produtos (o que atrai), e por último os
+dados práticos de localização e contato (o que converte a visita em ida à
+loja).
+
+## Passo 3: Estrutura em HTML5
+
+Implementada em `index.html`:
+- `<header>`: nome da mercearia, marca (SZ) e slogan, mais botão de WhatsApp.
+- `<main>`: texto de boas-vindas, lista de produtos/promoções da semana,
+  cartões de endereço (com link para o Maps), horário (em tabela) e contato.
+- `<footer>`: direitos autorais e links para redes sociais hipotéticas.
+
+## Passo 4: Versionamento com Git e GitHub
+
+Comandos a rodar na pasta do projeto (ver também o `README.md`):
+
+```bash
+git init
+git add index.html README.md wireframe.svg
+git commit -m "feat: adiciona estrutura basica do cabecalho"
+git commit -m "feat: adiciona secao de produtos e promocoes"
+git commit -m "feat: adiciona secao de endereco horario e contato"
+git branch -M main
+git remote add origin https://github.com/SEU-USUARIO/desafio-mercearia-seu-ze.git
+git push -u origin main
 ```
-.
-├── index.html        # estrutura da página (Passo 3)
-├── wireframe.svg      # wireframe de baixa fidelidade (Passo 2)
-├── PLANEJAMENTO.md    # respostas do Passo 1 e notas dos Passos 2-5
-└── README.md
-```
 
----
+(Crie antes o repositório público `desafio-mercearia-seu-ze` no seu perfil do
+GitHub, pela interface do site, sem nenhum arquivo inicial, para o `push`
+funcionar sem conflito.)
 
-## Mini-currículo da equipe
+## Passo 5: Entrega
 
-> ⚠️ **Preencha esta seção com os dados reais de cada integrante antes de
-> enviar o link do repositório** — é o requisito extra pedido pelo Seu Zé e
-> pelo Lucas para avaliar o perfil profissional de quem vai construir a
-> solução. Duplique o bloco abaixo para cada pessoa do grupo.
+Envie o link do repositório público do GitHub. Ele deve conter `index.html`
+funcionando e o `README.md` preenchido com o mini-currículo da dupla/grupo.
 
-### [Nome completo]
-
-- **Formação atual:** [ex.: Cursando Análise e Desenvolvimento de Sistemas, 2º período — Instituição]
-- **Competências técnicas em desenvolvimento:** HTML, CSS, Git e GitHub [ajuste/complemente]
-- **GitHub:** [https://github.com/seu-usuario]
-- **LinkedIn:** [https://linkedin.com/in/seu-usuario]
-- **Motivação:** [2-3 frases explicando por que você/sua dupla está preparada
-  para entregar essa solução para a Mercearia do Seu Zé — foque em
-  comprometimento, capacidade técnica e cuidado com o resultado.]
-
----
-
-© 2026 — Projeto acadêmico, sem fins comerciais.
